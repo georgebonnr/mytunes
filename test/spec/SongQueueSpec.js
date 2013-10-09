@@ -2,7 +2,6 @@ describe('SongQueue', function() {
   var playSpy, songData1, songData2;
 
   beforeEach(function() {
-    console.log("hi");
     playSpy = spyOn(SongQueue.prototype, 'playFirst').andCallThrough();
     songData1 = {
       artist: 'data',

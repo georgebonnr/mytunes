@@ -5,10 +5,10 @@ describe('LibraryEntryView', function() {
     model = new Song({
       artist: 'Fakey McFakerson',
       title: 'Never Gonna Mock You Up',
-      url: 'example/url',
+      url: 'example/url'
     });
-    // spyOn(Song.prototype, 'enqueue'); // Uncomment this when working on the second test
-    spyOn(Song.prototype, 'play');
+    spyOn(Song.prototype, 'enqueue'); // Uncomment this when working on the second test
+    // spyOn(Song.prototype, 'play');
     view = new LibraryEntryView({model: model});
     view.render();
   });
