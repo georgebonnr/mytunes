@@ -5,7 +5,11 @@ var App = Backbone.Model.extend({
     this.set('currentSong', new Song());
     this.set('songQueue', new SongQueue());
 
-    params.library.on('play', function(song){
+    // params.library.on('play', function(song){
+    //   this.set('currentSong', song);
+    // }, this);
+    // GEORGE: I'm doing this instead of the code above to make library attr listener more clear
+    this.attributes.library.on('play', function(song){
       this.set('currentSong', song);
     }, this);
   }
