@@ -13,13 +13,13 @@ describe('LibraryEntryView', function() {
     view.render();
   });
 
-  it('plays clicked songs', function(){
-    view.$el.children().first().click();
-    expect(model.play).toHaveBeenCalled();
-  });
+  // it('plays clicked songs', function(){
+  //   view.$el.children().first().click();
+  //   expect(model.play).toHaveBeenCalled();
+  // });
 
   // Comment out the above spec when implementing the below
-  xit('queues clicked songs', function(){
+  it('queues clicked songs', function(){
     view.$el.children().first().click();
     expect(model.enqueue).toHaveBeenCalled();
   });
