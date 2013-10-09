@@ -17,14 +17,14 @@ describe('Song', function() {
     });
   });
 
-  xdescribe('enqueue', function() {
+  describe('enqueue', function() {
     it('triggers an "enqueue" event', function() {
       model.enqueue();
       expect(model.trigger).toHaveBeenCalledWith('enqueue', model);
     });
   });
 
-  xdescribe('dequeue', function() {
+  describe('dequeue', function() {
     it('triggers a "dequeue" event', function() {
       model.dequeue();
       expect(model.trigger).toHaveBeenCalledWith('dequeue', model);
