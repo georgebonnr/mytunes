@@ -1,6 +1,15 @@
 // data.js - Defines an array of data regarding song files and their accompanying details.
 var songData = [
   {
+    url: "choose.mp3",
+    title: "Choose",
+    artist: "Super Mario"
+  },
+  {
+    url: "coin.mp3",
+    title: "Coin",
+    artist: "Super Mario"
+  },  {
     url: "https://s3-us-west-1.amazonaws.com/hr-mytunes/data/04+One+In+A+Million.mp3",
     title: "One In A Million",
     artist: "Aaliyah"

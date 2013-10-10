@@ -15,6 +15,9 @@ var App = Backbone.Model.extend({
     this.attributes.library.on('enqueue', function(song){
       this.get('songQueue').add(song);
     }, this);
+    this.attributes.currentSong.on('finished', function(song){
+      this.get('songQueue').remove(song);
+    }, this);
   }
 
 });
