@@ -17,10 +17,12 @@ var Song = Backbone.Model.extend({
 
   dequeue: function(){
     this.trigger('dequeue', this);
+  },
+
+  finished: function(){
+    this.playing = false;
+    this.trigger('finished', this);
+    this.played ? this.played++ : this.played = 1;
   }
-
-  // playing: true or false
-
-
 
 });

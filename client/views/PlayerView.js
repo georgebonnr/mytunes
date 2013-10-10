@@ -21,16 +21,14 @@ var PlayerView = Backbone.View.extend({
   setSong: function(song){
     this.model = song;
     this.render();
-    $(".player").bind('ended', this.changeSong);
-    // console.log(this.el);
-    // this.el.ended = function() {
-    //   alert('ended');
-    // };
-    // console.log(this.el.ended);
+    var that = this;
+    $(".player").bind('ended', this.changeSong.bind(that));
   },
 
   changeSong: function(){
-    alert("hi");
+    // alert();
+    $(".player").unbind('ended');
+    this.model.finished();
   },
 
   render: function(){
