@@ -6,16 +6,11 @@ var SongQueue = Songs.extend({
   initialize: function(){
 
     this.on('add',function(){
-      if(this.length === 1) {
-        this.playFirst();
-      }
+      console.log('added');
     });
 
     this.on('dequeue', function(song){
       this.remove(song);
-      if(this.length > 0) {
-        this.playFirst();
-      }
     });
   },
 
