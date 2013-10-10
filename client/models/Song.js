@@ -22,7 +22,7 @@ var Song = Backbone.Model.extend({
   finished: function(){
     this.playing = false;
     this.trigger('finished', this);
-    this.played ? this.played++ : this.played = 1;
+    // this.played ? this.played++ : this.played = 1;
   }
 
 });
