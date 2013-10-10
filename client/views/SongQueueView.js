@@ -21,3 +21,9 @@ var SongQueueView = Backbone.View.extend({
   }
 
 });
+
+
+// Here's the problem. When you dequeue the song that's playing, it's still bound.
+// When it finishes playing, it still triggers a dequeue.
+
+// Solution: remove first played song from queue

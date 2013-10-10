@@ -10,7 +10,7 @@ var App = Backbone.Model.extend({
     //   this.set('currentSong', song);
     // }, this);
     // GEORGE: I'm doing this instead of the code above to make library attr listener more clear
-    this.get('songQueue').on('play', function(song){
+    this.get('library').on('play', function(song){
       this.set('currentSong', song);
     }, this);
 
@@ -19,14 +19,11 @@ var App = Backbone.Model.extend({
     }, this);
 
     this.get('songQueue').on('finished', function(song){
-      // console.log('finished');
-      // this.set('currentSong', song);
-      this.get('songQueue').remove(song);
-      if (this.get('songQueue').length > 0) {
-        this.get('songQueue').playFirst();
-      } else {
-        console.log('unset');
+      console.log('finished');
+      song.dequeue();
+      if (this.get('songQueue').length === 0) {
         this.unset('currentSong', {silent: true});
+        console.log('unset');
       }
     }, this);
   }

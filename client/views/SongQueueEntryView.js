@@ -5,8 +5,9 @@ var SongQueueEntryView = Backbone.View.extend({
   template: _.template('(<%= artist %>)<%= title %>'),
 
   events: {
-    'dblclick': function() {
+    'click': function() {
       this.model.dequeue();
+      console.log('click dequeue');
     }
   },
 
