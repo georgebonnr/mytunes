@@ -4,7 +4,7 @@ var NowPlayingView = Backbone.View.extend({
   initialize: function() {
   },
 
-  template: _.template('Now Playing: (<%= artist %>)<%= title %>'),
+  template: _.template('Now Playing: (<%= artist %>) <%= title %>'),
 
   setSong: function(song){
     this.model = song;

@@ -5,10 +5,6 @@ var SongQueue = Songs.extend({
 
   initialize: function(){
 
-    this.on('add',function(){
-      console.log('added');
-    });
-
     this.on('dequeue', function(song){
       this.remove(song);
     });
