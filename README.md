@@ -1,3 +1,3 @@
 #mytunes
 
-Pair-programmed music player implemented in Backbone
+Play 🎶 in the browser.
